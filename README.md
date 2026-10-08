@@ -818,22 +818,40 @@ The objective is to produce data that is not only technically clean, but also **
 
 ### Next Stage
 
-* [ ] Business-focused transformations
-* [ ] Revenue calculations
-* [ ] Date dimension fields
-* [ ] Product/customer/order modeling
-* [ ] SQL database loading
-* [ ] Data warehouse design
-* [ ] Sales analysis
-* [ ] E-commerce KPI analysis
-* [ ] BI dashboard
-* [ ] Business insights
+* [x] Business-focused transformations
+* [x] Revenue calculations
+* [x] Date dimension fields
+* [x] Product/customer/order modeling
+* [x] SQL database loading
+* [x] Data warehouse design
+* [x] Sales analysis
+* [x] E-commerce KPI analysis
+* [x] BI dashboard
+* [x] Business insights
 
 ---
 
 ## Final Objective
 
-Build a complete retail/e-commerce data pipeline that takes **raw transaction data** and turns it into a reliable system for **sales analytics, business intelligence, and decision support**.
+## Business-Focused Transformations
+
+* **Revenue Calculations** — Calculated transaction-level revenue using quantity and price, generating **39.67M total revenue** across the retail dataset.
+
+* **Date Dimension** — Built a structured date dimension with year, month, month name, and full-date fields to support time-based sales analysis and reporting.
+
+* **Product, Customer & Order Modeling** — Structured products, customers, invoices/orders, and sales items into separate business entities to enable reliable customer, product, and order-level analysis.
+
+* **SQL Database Loading** — Loaded and validated cleaned retail data into SQL Server staging tables before transforming it into an analytical data warehouse.
+
+* **Data Warehouse Design** — Designed a star-schema-based warehouse using fact and dimension tables, including `FactSales`, `DimCustomer`, `DimProduct`, and `DimDate`, to support scalable analytical queries.
+
+* **Sales Analysis** — Analyzed revenue, orders, customers, products, countries, sales trends, customer value, and product performance. The analysis identified **44,876 orders, 5,955 customers, and 8,275 products**.
+
+* **E-commerce KPI Analysis** — Developed key business KPIs including **Revenue (39.67M), Orders (44,876), Customers (5,955), Products (8,275), and Average Order Value (883.90)**. Statistical analysis also identified a **0.709 correlation between quantity and revenue**.
+
+* **BI Dashboard** — Developed a Power BI reporting structure covering executive KPIs, sales trends, country/product performance, and customer analysis to support business decision-making.
+
+* **Business Insights** — Identified that high historical customer revenue does not necessarily indicate current customer activity, and that product revenue depends on both sales volume and product value. Statistical analysis also showed a highly right-skewed sales distribution, with **561.69 skewness**, highlighting the impact of unusually large transactions.
 
 The project is designed to demonstrate the complete journey:
 
